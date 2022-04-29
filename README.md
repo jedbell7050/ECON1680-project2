@@ -36,4 +36,4 @@ Once the articles are scraped and stored in a dataframe, label the gender of eac
 
 This should result in many authors being present in the women's top 20 most important words. To fix this, do another round of cleaning and remove author names by creating a set of author name tokens from the author column of the dataframe. Then loop through the set and remove each token from the clean text. Also in this round, create a new column of text with the stemmed words.
 
-Next run two more logit-lasso regressions, one on the new clean text without the authors, and one on the stemmed text and print the top 20 coefficients for each gender. Note: for each train test split, the random seed should be 1680.
+Next run two more logit-lasso regressions, one on the new clean text without the authors, and one on the stemmed text and print the top 20 coefficients for each gender. Note: for each train test split, the random seed should be 1680, and you should set stratify equal to the gender labels column.
